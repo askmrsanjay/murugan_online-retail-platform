@@ -44,3 +44,12 @@
     - [x] Implement Add to Cart Action <!-- id: 41 -->
     - [x] Implement Checkout (Create Order) <!-- id: 42 -->
     - [x] Test Full User Journey (UI) <!-- id: 43 -->
+- [x] Add Operational Tools <!-- id: 44 -->
+    - [x] Add pgAdmin (Postgres GUI) <!-- id: 45 -->
+    - [x] Add Mongo Express (Mongo GUI) <!-- id: 46 -->
+    - [x] Add Redis Commander (Redis GUI) <!-- id: 47 -->
+- [x] Feature: Clear Cart on Checkout <!-- id: 48 -->
+    - [x] Add DELETE API to Cart Service <!-- id: 49 -->
+    - [x] Call Clear Cart from Frontend after Order <!-- id: 50 -->
+
+

@@ -191,5 +191,6 @@ graph LR
 3.  Click **"Go to Cart"** (top right).
 4.  Verify the item is listed.
 5.  Click **"Checkout (Place Order)"**.
-6.  You should see "Order Placed Successfully! Order ID: X".
+6.  You should see "Order Placed Successfully!".
+7.  **Refresh the Page**. The cart should now be empty (this confirms the feature works).
 
