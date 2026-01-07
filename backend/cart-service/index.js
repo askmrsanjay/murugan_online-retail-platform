@@ -63,6 +63,17 @@ app.delete('/api/v1/cart/:userId/:productId', async (req, res) => {
     }
 });
 
+// DELETE Clear entire cart
+app.delete('/api/v1/cart/:userId', async (req, res) => {
+    try {
+        const { userId } = req.params;
+        await redis.del(`cart:${userId}`);
+        res.json({ message: 'Cart cleared' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 app.listen(port, () => {
     console.log(`Cart service running on port ${port}`);
 });

@@ -42,8 +42,12 @@ export default function Cart() {
 
             if (res.ok) {
                 const order = await res.json();
+
+                // Clear the remote cart
+                await fetch(`/api/v1/cart/${userId}`, { method: 'DELETE' });
+
                 setMessage(`Order Placed Successfully! Order ID: ${order.id}`);
-                setCart({}); // specific to local state, ideal to clear server cart too
+                setCart({}); // Clear local state
             } else {
                 setMessage('Checkout failed');
             }
