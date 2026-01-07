@@ -1,0 +1,46 @@
+# Tasks
+
+- [x] Design System Architecture <!-- id: 0 -->
+    - [x] Create Architecture Overview <!-- id: 1 -->
+    - [x] Define Technology Stack (Switching to Open Source/Free) <!-- id: 2 -->
+    - [x] Define Database Schema (High Level) <!-- id: 3 -->
+    - [x] Define API Gateway & Microservices Strategy <!-- id: 4 -->
+- [x] Document Infrastructure & Security <!-- id: 5 -->
+- [x] Create Implementation Plan <!-- id: 6 -->
+- [x] Implement PoC Skeleton <!-- id: 7 -->
+    - [x] Create Project Structure <!-- id: 8 -->
+    - [x] Implement API Gateway (Nginx) <!-- id: 9 -->
+    - [x] Implement Catalog Service (Node.js) <!-- id: 10 -->
+    - [x] Orchestrate with Docker Compose <!-- id: 11 -->
+- [/] Implement Persistent Catalog Service <!-- id: 12 -->
+    - [x] Add MongoDB to Docker Compose <!-- id: 13 -->
+    - [x] Integrate Mongoose in Catalog Service <!-- id: 14 -->
+    - [x] Create Product Model & CRUD Endpoints <!-- id: 15 -->
+    - [x] Verify Data Persistence <!-- id: 16 -->
+- [x] Implement Basic Web Frontend <!-- id: 17 -->
+    - [x] Scaffold Next.js App (Manual Setup) <!-- id: 18 -->
+    - [x] Create Product Listing Page <!-- id: 19 -->
+    - [x] Dockerize Frontend <!-- id: 20 -->
+    - [x] Update API Gateway Routing <!-- id: 21 -->
+- [x] Implement Identity Service (Keycloak) <!-- id: 22 -->
+    - [x] Add PostgreSQL (for Auth) to Docker Compose <!-- id: 23 -->
+    - [x] Add Keycloak Service to Docker Compose <!-- id: 24 -->
+    - [x] Configure Keycloak Admin User <!-- id: 25 -->
+    - [x] Verify Admin Console Access <!-- id: 26 -->
+- [x] Implement Cart Service (Redis) <!-- id: 27 -->
+    - [x] Add Redis to Docker Compose <!-- id: 28 -->
+    - [x] Create Cart Service (Node.js) <!-- id: 29 -->
+    - [x] Implement Add/Get Cart API <!-- id: 30 -->
+    - [x] Update API Gateway Routing <!-- id: 31 -->
+    - [x] Verify Cart Operations <!-- id: 32 -->
+- [x] Implement Order Service (PostgreSQL) <!-- id: 33 -->
+    - [x] Add OrderDB (Postgres) to Docker Compose <!-- id: 34 -->
+    - [x] Create Order Service (Node.js + pg) <!-- id: 35 -->
+    - [x] Implement Create Order API <!-- id: 36 -->
+    - [x] Connect Architecture (Gateway -> Order) <!-- id: 37 -->
+    - [x] Verify End-to-End Flow <!-- id: 38 -->
+- [x] Integrate Frontend with Services <!-- id: 39 -->
+    - [x] Create Cart Page (Frontend) <!-- id: 40 -->
+    - [x] Implement Add to Cart Action <!-- id: 41 -->
+    - [x] Implement Checkout (Create Order) <!-- id: 42 -->
+    - [x] Test Full User Journey (UI) <!-- id: 43 -->
