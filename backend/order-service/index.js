@@ -70,3 +70,4 @@ app.post('/api/v1/orders', async (req, res) => {
 app.listen(port, () => {
     console.log(`Order service running on port ${port}`);
 });
+

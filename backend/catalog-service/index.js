@@ -68,3 +68,4 @@ mongoose.connection.once('open', seedData);
 app.listen(port, () => {
     console.log(`Catalog service running on port ${port}`);
 });
+

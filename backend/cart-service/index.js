@@ -66,3 +66,4 @@ app.delete('/api/v1/cart/:userId/:productId', async (req, res) => {
 app.listen(port, () => {
     console.log(`Cart service running on port ${port}`);
 });
+
