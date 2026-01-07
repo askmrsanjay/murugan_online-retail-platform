@@ -69,3 +69,4 @@ app.listen(port, () => {
     console.log(`Catalog service running on port ${port}`);
 });
 
+
