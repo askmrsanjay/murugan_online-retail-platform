@@ -1,12 +1,16 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { useSession } from "next-auth/react";
 
 export default function Cart() {
+    const { data: session } = useSession();
     const [cart, setCart] = useState(null);
     const [message, setMessage] = useState('');
-    const userId = 'test_user_frontend';
 
     const fetchCart = async () => {
+        if (!session) return;
+        const userId = session.user.email || session.user.name.replace(/\s+/g, '_');
+
         try {
             const res = await fetch(`/api/v1/cart/${userId}`);
             if (res.ok) {
@@ -19,10 +23,13 @@ export default function Cart() {
     };
 
     useEffect(() => {
-        fetchCart();
-    }, []);
+        if (session) fetchCart();
+    }, [session]);
 
     const checkout = async () => {
+        if (!session) return;
+        const userId = session.user.email || session.user.name.replace(/\s+/g, '_');
+
         try {
             const items = Object.entries(cart).map(([productId, qty]) => ({ productId, qty: parseInt(qty) }));
             if (items.length === 0) return;
@@ -57,7 +64,16 @@ export default function Cart() {
         }
     };
 
+    if (!session) {
+        return (
+            <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+                <p>Please <a href="/" style={{ color: 'blue' }}>login</a> to view your cart.</p>
+            </div>
+        );
+    }
+
     if (!cart) return <div>Loading Cart...</div>;
+
 
     const cartItems = Object.entries(cart);
 
